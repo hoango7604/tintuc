@@ -74,7 +74,7 @@
 			        <div class="form-group">
 			          <input type="text" class="form-control" placeholder="Search">
 			        </div>
-			        <button type="submit" class="btn btn-default">Submit</button>
+			        <button type="submit" class="btn btn-default">Tìm kiếm</button>
 			    </form>
 
 			    <ul class="nav navbar-nav pull-right">
@@ -178,8 +178,7 @@
                                 </li>
                                     <ul>
                                     <?php
-                                        while ($j < count($menu2) && $menu2[$j]->idTheLoai == $menu1[$i]->id)
-                                        {
+                                        while ($j < count($menu2) && $menu2[$j]->idTheLoai == $menu1[$i]->id){
                                             ?>
                                                 <li class="list-group-item">
                                                     <a href="loaitin.html"><?php echo $menu2[$j]->Ten ?></a>
@@ -211,8 +210,12 @@
                                         <h3>
                                             <a href="#"><?php echo $menu1[$i]->Ten ?></a> |
                                 <?php
+                                    while ($j < count($menu2) && $menu2[$j]->idTheLoai == $menu1[$i]->id){
+                                        ?>
+                                        <small><a href="loaitin.html"><i>subtitle</i></a>/</small>
+                                        <?php
+                                    }
                                 ?>
-                                            <small><a href="loaitin.html"><i>subtitle</i></a>/</small>
                                         </h3>
                                         <div class="col-md-12 border-right">
                                             <div class="col-md-3">
