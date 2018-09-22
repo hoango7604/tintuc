@@ -62,5 +62,18 @@
 		}
 
 		// Controller cho trang hiển thị chi tiết bài viết
+		public function chitiet(){
+
+			// Lấy id bài viết
+			$id = (isset($_GET['id']))?$_GET['id']:1;
+
+			// Lấy chi tiết bài viết
+			$chiTietTin = $this->m_tintuc->getChitietBaiViet($id);
+
+			// Lấy bình luận bài viết
+			$binhLuan = $this->m_tintuc->getBinhLuan($id);
+
+			return array('chiTietTin'=>$chiTietTin, 'binhLuan'=>$binhLuan);
+		}
 	}
 ?>

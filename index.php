@@ -17,7 +17,7 @@
     // Lấy tin tức tóm tắt nổi bật
     $tintuc = $noi_dung['tintuc'];
 
-    // print_r();
+    // print_r($tintuc);
 ?>
 
 <?php
@@ -113,15 +113,17 @@
                                         </h3>
                                         <div class="col-md-12 border-right">
                                             <div class="col-md-3">
-                                                <a href="chitiet.html">
+                                                <a href="chitiet.php?id=<?php echo $tintuc[$i]->id ?>">
                                                     <img class="img-responsive" src="public/image/tintuc/<?php echo $tintuc[$i]->Hinh ?>" alt="">
                                                 </a>
                                             </div>
 
                                             <div class="col-md-9">
-                                                <h3><?php echo $tintuc[$i]->TieuDe ?></h3>
+                                                <a href="chitiet.php?id=<?php echo $tintuc[$i]->id ?>">
+                                                    <h3><?php echo $tintuc[$i]->TieuDe ?></h3>
+                                                </a>
                                                 <p><?php echo $tintuc[$i]->TomTat ?></p>
-                                                <a class="btn btn-primary" href="chitiet.html">Đọc tiếp <span class="glyphicon glyphicon-chevron-right"></span></a>
+                                                <a class="btn btn-primary" href="chitiet.php?id=<?php echo $tintuc[$i]->id ?>">Đọc tiếp <span class="glyphicon glyphicon-chevron-right"></span></a>
                                             </div>
 
                                         </div>
@@ -142,5 +144,5 @@
     <!-- end Page Content -->
 
 <?php 
-    include_once 'public/footer.php';
+    include_once 'library/footer.php';
 ?>

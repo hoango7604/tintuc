@@ -19,7 +19,7 @@
     // Lấy thanh phân trang
     $thanhPhanTrang = $noi_dung['thanhPhanTrang'];
 
-	// print_r($thanhPhanTrang);
+	// print_r($tintuc);
 ?>
 
 	<?php
@@ -46,7 +46,7 @@
                     		for ($i = 0; $i < count($tintuc); $i++){
                     			?>
                     				<div class="col-md-3">
-			                            <a href="chitiet.html">
+			                            <a href="chitiet.php?id=<?php echo $tintuc[$i]->id ?>">
 			                                <br>
 			                                <img width="200px" height="200px" class="img-responsive" src="public/image/tintuc/<?php echo $tintuc[$i]->Hinh ?>" alt="">
 			                            </a>
@@ -55,7 +55,7 @@
 			                        <div class="col-md-9">
 			                            <h3><?php echo $tintuc[$i]->TieuDe ?></h3>
 			                            <p><?php echo $tintuc[$i]->TomTat ?></p>
-			                            <a class="btn btn-primary" href="chitiet.html">Đọc tiếp <span class="glyphicon glyphicon-chevron-right"></span></a>
+			                            <a class="btn btn-primary" href="chitiet.php?id=<?php echo $tintuc[$i]->id ?>">Đọc tiếp <span class="glyphicon glyphicon-chevron-right"></span></a>
 			                        </div>
 			                        <div class="break"></div>
                     			<?php
