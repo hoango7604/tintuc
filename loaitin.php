@@ -16,11 +16,14 @@
     // Lấy tin tức
     $tintuc = $noi_dung['tintuc'];
 
-	// print_r($loaitin);
+    // Lấy thanh phân trang
+    $thanhPhanTrang = $noi_dung['thanhPhanTrang'];
+
+	// print_r($thanhPhanTrang);
 ?>
 
 	<?php
-		include_once 'public/header.php';
+		include_once 'library/header.php';
 	?>
 
 	<!-- Page Content -->
@@ -28,7 +31,7 @@
         <div class="row">
             
             <?php
-            	include_once 'public/menu.php';
+            	include_once 'library/menu.php';
             ?>
 
             <div class="col-md-9 ">
@@ -65,29 +68,7 @@
                     <!-- Pagination -->
                     <div class="row text-center">
                         <div class="col-lg-12">
-                            <ul class="pagination">
-                                <li>
-                                    <a href="#">&laquo;</a>
-                                </li>
-                                <li class="active">
-                                    <a href="#">1</a>
-                                </li>
-                                <li>
-                                    <a href="#">2</a>
-                                </li>
-                                <li>
-                                    <a href="#">3</a>
-                                </li>
-                                <li>
-                                    <a href="#">4</a>
-                                </li>
-                                <li>
-                                    <a href="#">5</a>
-                                </li>
-                                <li>
-                                    <a href="#">&raquo;</a>
-                                </li>
-                            </ul>
+                            <?php echo $thanhPhanTrang ?>
                         </div>
                     </div>
                     <!-- /.row -->
@@ -101,5 +82,5 @@
     <!-- end Page Content -->
 
 <?php
-	include_once 'public/footer.php';
+	include_once 'library/footer.php';
 ?>

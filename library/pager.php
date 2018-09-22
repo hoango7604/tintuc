@@ -4,8 +4,8 @@
 	*/
 	class pagination{
 		private $_totalItem;// tổng số item
-		public $_nItemOnPage; // số lượng item trong 1 page
-		private $_nPageShow ; // số lượng link page hiển thị
+		private  $_nItemOnPage; // số lượng item trong 1 page
+		private $_nPageShow; // số lượng link page hiển thị
 		private $_totalPage; // tổng số page
 		private $_currentPage; // page hiển thị
 
@@ -41,14 +41,14 @@
 				$start 	= '';
 				$prev 	= '';
 				if($this->_currentPage > 1){
-					$start 	= "<li><a href='$actual_link&page=1'>Start</a></li>";
+					$start 	= "<li><a href='$actual_link&page=1'>Đầu</a></li>";
 					$prev 	= "<li><a href='$actual_link&page=".($this->_currentPage-1)."'>«</a></li>";
 				}
 				$next 	= '';
 				$end 	= '';
 				if($this->_currentPage < $this->_totalPage){
-					$next 	= "<li><a href='$actual_link&page=".($this->_currentPage+1)."'>«</a></li>";
-					$end 	= "<li><a href='$actual_link&page=".$this->_totalPage."'>End</a></li>";
+					$next 	= "<li><a href='$actual_link&page=".($this->_currentPage+1)."'>»</a></li>";
+					$end 	= "<li><a href='$actual_link&page=".$this->_totalPage."'>Cuối</a></li>";
 				}
 
 				if($this->_nPageShow < $this->_totalPage){

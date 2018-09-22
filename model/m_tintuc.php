@@ -1,8 +1,9 @@
 <?php 
-	include_once 'database.php';
+	include_once 'library/database.php';
 
 	class M_tintuc extends database{
 
+		// Trang chủ
 		public function getSlide(){
 			$sql = "SELECT * FROM slide";
 			$this->setQuery($sql);
@@ -27,16 +28,25 @@
 			return $this->loadAllRows();
 		}
 
+		// Trang hiển thị danh sách bài theo danh mục
 		public function getLoaiTinTheoId($id){
 			$sql = "SELECT * FROM loaitin lt WHERE lt.id = $id";
 			$this->setQuery($sql);
 			return $this->loadAllRows(array($id));
 		}
 
-		public function getTinTucTheoIdLoaiTin($idLoaiTin){
+		public function getAllTinTucTheoIdLoaiTin($idLoaiTin){
 			$sql = "SELECT * FROM tintuc t WHERE t.idLoaiTin = $idLoaiTin";
 			$this->setQuery($sql);
 			return $this->loadAllRows(array($idLoaiTin));
 		}
+
+		public function getTinTucTheoIdLoaiTin($idLoaiTin, $vitri = 0, $limit = 5){
+			$sql = "SELECT * FROM tintuc t WHERE t.idLoaiTin = $idLoaiTin LIMIT $vitri, $limit";
+			$this->setQuery($sql);
+			return $this->loadAllRows(array($idLoaiTin));
+		}
+
+		// Trang hiển thị chi tiết bài viết
 	}
 ?>

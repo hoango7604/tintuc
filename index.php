@@ -17,11 +17,11 @@
     // Lấy tin tức tóm tắt nổi bật
     $tintuc = $noi_dung['tintuc'];
 
-    // print_r($tintuc);
+    // print_r();
 ?>
 
 <?php
-    include_once 'public/header.php';
+    include_once 'library/header.php';
 ?>
 
     <!-- Page Content -->
@@ -83,7 +83,7 @@
         <div class="row main-left">
             
             <?php
-                include_once 'public/menu.php';
+                include_once 'library/menu.php';
             ?>
 
             <!-- Tin tức -->
